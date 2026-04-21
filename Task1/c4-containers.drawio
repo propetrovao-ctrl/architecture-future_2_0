@@ -1,0 +1,243 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36">
+  <diagram id="c4-containers" name="C4-Containers">
+    <mxGraphModel dx="3672" dy="868" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2200" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="edge_user_portal" edge="1" parent="1" source="-BSVm_NqgGaEL10RkahB-17" style="endArrow=block;html=1;strokeColor=#0B3A6A;fontColor=#0B3A6A;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" target="-BSVm_NqgGaEL10RkahB-11" value="[HTTPS + API Gateway] использует">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1950" y="480" as="sourcePoint" />
+            <mxPoint x="2363.217288135593" y="950" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_bi_storage" edge="1" parent="1" source="-BSVm_NqgGaEL10RkahB-12" style="endArrow=block;html=1;strokeColor=#0B3A6A;fontColor=#0B3A6A;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" target="-BSVm_NqgGaEL10RkahB-16" value="[SQL + Power BI] читает витрины">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2250.0000000000005" y="1010" as="sourcePoint" />
+            <mxPoint x="2110" y="1370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_catalog_storage" edge="1" parent="1" source="-BSVm_NqgGaEL10RkahB-14" style="endArrow=block;html=1;strokeColor=#0B3A6A;fontColor=#0B3A6A;exitX=0.533;exitY=0.992;exitDx=0;exitDy=0;exitPerimeter=0;" target="-BSVm_NqgGaEL10RkahB-16" value="[DataHub API + Kafka MCL] метаданные/политики">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2370" y="1220" as="sourcePoint" />
+            <mxPoint x="2520" y="1550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_ingestion_storage" edge="1" parent="1" source="-BSVm_NqgGaEL10RkahB-13" style="endArrow=block;html=1;strokeColor=#0B3A6A;fontColor=#0B3A6A;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" target="-BSVm_NqgGaEL10RkahB-16" value="[Airflow + Spark + Iceberg/Delta] загрузка и трансформации">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="2200" y="770" as="sourcePoint" />
+            <mxPoint x="2810.473333333333" y="1640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_iam_portal" edge="1" parent="1" source="-BSVm_NqgGaEL10RkahB-15" style="endArrow=block;html=1;strokeColor=#0B3A6A;fontColor=#0B3A6A;exitX=0.467;exitY=1.004;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="-BSVm_NqgGaEL10RkahB-11" value="[Cloud IAM RBAC/ABAC] авторизует">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2018.2172602739727" y="1260" as="sourcePoint" />
+            <mxPoint x="1929.998082191781" y="980" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_iam_bi" edge="1" parent="1" source="-BSVm_NqgGaEL10RkahB-15" style="endArrow=block;html=1;strokeColor=#0B3A6A;fontColor=#0B3A6A;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.479;exitY=1.017;exitDx=0;exitDy=0;exitPerimeter=0;" target="-BSVm_NqgGaEL10RkahB-12" value="[Cloud IAM RBAC/ABAC] авторизует">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1910.0006849315068" y="1290" as="sourcePoint" />
+            <mxPoint x="2250" y="1010" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_ui_dwh" edge="1" parent="1" source="-BSVm_NqgGaEL10RkahB-7" style="endArrow=block;html=1;strokeColor=#6B6B6B;fontColor=#6B6B6B;dashed=1;exitX=0.475;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="-BSVm_NqgGaEL10RkahB-4" value="[ODBC/SQL] работа оператора">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-20.004444444444346" y="1240" as="sourcePoint" />
+            <mxPoint x="610" y="1340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_bi_dwh" edge="1" parent="1" source="-BSVm_NqgGaEL10RkahB-6" style="endArrow=block;html=1;strokeColor=#6B6B6B;fontColor=#6B6B6B;dashed=1;exitX=1;exitY=0.542;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="-BSVm_NqgGaEL10RkahB-4" value="[SQL] отчётность (переходный период)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="359.99571428571426" y="1225" as="sourcePoint" />
+            <mxPoint x="670" y="1180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_legacy_dwh_ingestion" edge="1" parent="1" source="-BSVm_NqgGaEL10RkahB-4" style="endArrow=block;html=1;strokeColor=#6B6B6B;fontColor=#6B6B6B;dashed=1;exitX=0.996;exitY=0.558;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="-BSVm_NqgGaEL10RkahB-16" value="[Batch ETL/CSV] выгрузка на миграции">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="575" y="1439.9977300613498" as="sourcePoint" />
+            <mxPoint x="1635" y="1280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_legacy_esb_ingestion" edge="1" parent="1" source="-BSVm_NqgGaEL10RkahB-5" style="endArrow=block;html=1;strokeColor=#6B6B6B;fontColor=#6B6B6B;dashed=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.988;exitY=0.567;exitDx=0;exitDy=0;exitPerimeter=0;" target="-BSVm_NqgGaEL10RkahB-13" value="[ESB routes -&gt; Kafka Connect] strangler-перенос">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="350" y="945.2453374233128" as="sourcePoint" />
+            <mxPoint x="920" y="934.7545398773004" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_legacy_bi_bi" edge="1" parent="1" source="-BSVm_NqgGaEL10RkahB-6" style="endArrow=block;html=1;strokeColor=#6B6B6B;fontColor=#6B6B6B;dashed=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="-BSVm_NqgGaEL10RkahB-12" value="[Power BI Gateway] временное сосуществование">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="1227.9394117647057" as="sourcePoint" />
+            <mxPoint x="1450" y="990" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <object placeholders="1" c4Name="Легаси" c4Type="SystemScopeBoundary" c4Application="Software System" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;&lt;div style=&quot;text-align: left&quot;&gt;%c4Name%&lt;/div&gt;&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;text-align: left&quot;&gt;[%c4Application%]&lt;/div&gt;" id="-BSVm_NqgGaEL10RkahB-3">
+          <mxCell parent="1" style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;dashed=1;arcSize=20;fillColor=none;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;dashPattern=8 4;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=1;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="670" width="670" x="-20" y="840" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="DWH" c4Type="Container" c4Technology="SQL Server 2008 + часть логики" c4Description="" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="-BSVm_NqgGaEL10RkahB-4">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="120" width="240" x="370" y="1280" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="ESB" c4Type="Container" c4Technology="Apache Camel" c4Description="" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="-BSVm_NqgGaEL10RkahB-5">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="120" width="240" x="60" y="880" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="BI" c4Type="Container" c4Technology="Power BI + кастомизации" c4Description="" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="-BSVm_NqgGaEL10RkahB-6">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="120" width="240" x="50" y="1060" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="Клиентский UI" c4Type="Container" c4Technology="PowerBuilder" c4Description="" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="-BSVm_NqgGaEL10RkahB-7">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="120" width="240" x="30" y="1300" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="Оператор клиники" c4Type="Person" c4Description="" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#cccccc&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="-BSVm_NqgGaEL10RkahB-8">
+          <mxCell parent="1" style="html=1;fontSize=11;dashed=0;whiteSpace=wrap;fillColor=#083F75;strokeColor=#06315C;fontColor=#ffffff;shape=mxgraph.c4.person2;align=center;metaEdit=1;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];resizable=0;" vertex="1">
+            <mxGeometry height="180" width="200" x="-230" y="970" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="-BSVm_NqgGaEL10RkahB-9" edge="1" parent="1" source="-BSVm_NqgGaEL10RkahB-8" style="endArrow=block;html=1;strokeColor=#6B6B6B;fontColor=#6B6B6B;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;rounded=0;curved=0;entryX=0.533;entryY=0.025;entryDx=0;entryDy=0;entryPerimeter=0;" target="-BSVm_NqgGaEL10RkahB-7" value="[PowerBuilder client] использует">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="1049" as="sourcePoint" />
+            <mxPoint x="420" y="1370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <object placeholders="1" c4Name="Облако" c4Type="SystemScopeBoundary" c4Application="Software System" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;&lt;div style=&quot;text-align: left&quot;&gt;%c4Name%&lt;/div&gt;&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;text-align: left&quot;&gt;[%c4Application%]&lt;/div&gt;" id="-BSVm_NqgGaEL10RkahB-10">
+          <mxCell parent="1" style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;dashed=1;arcSize=20;fillColor=none;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;dashPattern=8 4;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=1;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="1320" width="1120" x="1760" y="440" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="Портал самообслуживания" c4Type="Container" c4Technology="React + API Gateway" c4Description="" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="-BSVm_NqgGaEL10RkahB-11">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="120" width="240" x="1970" y="670" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="BI / Отчётность" c4Type="Container" c4Technology="Power BI + Dremio Sonar" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="-BSVm_NqgGaEL10RkahB-12">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="120" width="240" x="2370" y="670" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="Загрузка / Интеграция" c4Type="Container" c4Technology="Airflow, Kafka Connect, Debezium" c4Description="" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="-BSVm_NqgGaEL10RkahB-13">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="120" width="260" x="1860" y="1115" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="Каталог данных + Governance" c4Type="Container" c4Technology="DataHub + Kafka Metadata Change Log" c4Description="" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="-BSVm_NqgGaEL10RkahB-14">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="120" width="280" x="1850" y="1510" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="IAM / Контроль доступа + аудит" c4Type="Container" c4Technology="Cloud IAM, RBAC/ABAC, audit log" c4Description="" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="-BSVm_NqgGaEL10RkahB-15">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="120" width="320" x="2190" y="480" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="Аналитическое хранилище" c4Type="Container" c4Technology="MinIO + Apache Iceberg/Delta Lake + Dremio" c4Description="" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%:&amp;nbsp;%c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="-BSVm_NqgGaEL10RkahB-16">
+          <mxCell parent="1" style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=12;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];resizable=0;" vertex="1">
+            <mxGeometry height="120" width="300" x="2520" y="1480" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="Бизнес-пользователь" c4Type="аналитик / менеджер" c4Description="" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#cccccc&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="-BSVm_NqgGaEL10RkahB-17">
+          <mxCell parent="1" style="html=1;fontSize=11;dashed=0;whiteSpace=wrap;fillColor=#083F75;strokeColor=#06315C;fontColor=#ffffff;shape=mxgraph.c4.person2;align=center;metaEdit=1;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];resizable=0;" vertex="1">
+            <mxGeometry height="180" width="200" x="1820" y="230" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="Внутренние сервисы" c4Type="Container" c4Technology="Java/.NET, REST/gRPC" c4Description="" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="-BSVm_NqgGaEL10RkahB-18">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="120" width="240" x="690" y="1090" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="Системы новых бизнесов" c4Type="Container" c4Technology="REST/gRPC APIs, batch exports" c4Description="" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="-BSVm_NqgGaEL10RkahB-19">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="120" width="240" x="680" y="1260" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="Финтех-сервисы&#xa;" c4Type="Container" c4Technology="Go/Java, REST + Kafka producers" c4Description="" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="-BSVm_NqgGaEL10RkahB-20">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="120" width="240" x="690" y="890" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="ИИ-сервисы" c4Type="Container" c4Technology="Python, REST + Kafka producers" c4Description="" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="-BSVm_NqgGaEL10RkahB-21">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="120" width="240" x="700" y="570" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="edge_fin_event_bus" edge="1" parent="1" source="-BSVm_NqgGaEL10RkahB-20" style="endArrow=block;html=1;strokeColor=#0B3A6A;fontColor=#0B3A6A;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="container_event_bus" value="[Kafka] доменные события">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="930" y="960" as="sourcePoint" />
+            <mxPoint x="1160" y="990" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_ai_event_bus" edge="1" parent="1" source="-BSVm_NqgGaEL10RkahB-21" style="endArrow=block;html=1;strokeColor=#0B3A6A;fontColor=#0B3A6A;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="container_event_bus" value="[Kafka] доменные события">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="940" y="630" as="sourcePoint" />
+            <mxPoint x="1160" y="970" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_internal_event_bus" edge="1" parent="1" source="-BSVm_NqgGaEL10RkahB-18" style="endArrow=block;html=1;strokeColor=#0B3A6A;fontColor=#0B3A6A;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="container_event_bus" value="[Kafka] доменные события">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="930" y="1150" as="sourcePoint" />
+            <mxPoint x="1160" y="1010" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_new_event_bus" edge="1" parent="1" source="-BSVm_NqgGaEL10RkahB-19" style="endArrow=block;html=1;strokeColor=#0B3A6A;fontColor=#0B3A6A;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="container_event_bus" value="[Kafka] доменные события">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="920" y="1320" as="sourcePoint" />
+            <mxPoint x="1160" y="1030" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_event_bus_ingestion" edge="1" parent="1" source="container_event_bus" style="endArrow=block;html=1;strokeColor=#0B3A6A;fontColor=#0B3A6A;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="-BSVm_NqgGaEL10RkahB-13" value="[Kafka topics + CDC] ingestion">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1370" y="1010" as="sourcePoint" />
+            <mxPoint x="1400" y="730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_event_bus_validation" edge="1" parent="1" source="container_event_bus" style="endArrow=block;html=1;strokeColor=#0B3A6A;fontColor=#0B3A6A;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="container_validation" value="[Kafka] потоки на проверку ФЛК">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1370" y="1020" as="sourcePoint" />
+            <mxPoint x="1280" y="1150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_validation_ingestion" edge="1" parent="1" source="container_validation" style="endArrow=block;html=1;strokeColor=#0B3A6A;fontColor=#0B3A6A;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="-BSVm_NqgGaEL10RkahB-13" value="[Flink/Spark stream] валидированные события">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2130" y="1300" as="sourcePoint" />
+            <mxPoint x="2200" y="780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_ingestion_catalog" edge="1" parent="1" source="-BSVm_NqgGaEL10RkahB-13" style="endArrow=block;html=1;strokeColor=#0B3A6A;fontColor=#0B3A6A;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="-BSVm_NqgGaEL10RkahB-14" value="[DataHub Ingestion + Kafka MCL] lineage/схемы/SLA">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2320" y="810" as="sourcePoint" />
+            <mxPoint x="2160" y="1360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_fin_catalog" edge="1" parent="1" source="-BSVm_NqgGaEL10RkahB-20" style="endArrow=block;html=1;strokeColor=#0B3A6A;fontColor=#0B3A6A;dashed=1;entryX=0;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;" target="-BSVm_NqgGaEL10RkahB-14" value="[DataHub API] контракты датапродукта">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="930" y="930" as="sourcePoint" />
+            <mxPoint x="1240" y="1380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_ai_catalog" edge="1" parent="1" source="-BSVm_NqgGaEL10RkahB-21" style="endArrow=block;html=1;strokeColor=#0B3A6A;fontColor=#0B3A6A;dashed=1;entryX=0;entryY=0.3;entryDx=0;entryDy=0;entryPerimeter=0;" target="-BSVm_NqgGaEL10RkahB-14" value="[DataHub API] контракты датапродукта">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="940" y="620" as="sourcePoint" />
+            <mxPoint x="1240" y="1360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <object placeholders="1" c4Name="Событийная шина + CDC" c4Type="Container" c4Technology="Kafka, Kafka Connect, Debezium" c4Description="" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="container_event_bus">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="120" width="300" x="1290" y="570" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="Валидация и потоковые правила" c4Type="Container" c4Technology="Apache Flink / Apache Spark Streaming" c4Description="" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="container_validation">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="120" width="320" x="1830" y="900" as="geometry" />
+          </mxCell>
+        </object>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

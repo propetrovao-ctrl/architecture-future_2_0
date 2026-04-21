@@ -1,0 +1,6 @@
+authorized_key.json
+terraform.tfstate
+terraform.tfstate.backup
+.terraform/
+ssh-key-1776343620368
+id_rsa.pub

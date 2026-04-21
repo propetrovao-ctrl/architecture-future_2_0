@@ -1,0 +1,115 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram id="task4-deploy-automation" name="Deployment Automation">
+    <mxGraphModel dx="1567" dy="917" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="terraform_zone" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#1D4ED8;strokeWidth=2;fontSize=18;fontStyle=1;fontColor=#1D4ED8;verticalAlign=top;spacingTop=12;" value="Terraform (IaC)" vertex="1">
+          <mxGeometry height="760" width="1050" x="30" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="manual_zone" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#C2410C;strokeWidth=2;fontSize=18;fontStyle=1;fontColor=#C2410C;verticalAlign=top;spacingTop=12;" value="Вне Terraform / вручную" vertex="1">
+          <mxGeometry height="760" width="430" x="1120" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="provider" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#1D4ED8;fontSize=14;" value="Provider&#xa;Yandex Cloud" vertex="1">
+          <mxGeometry height="90" width="290" x="90" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="sg" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#166534;fontSize=14;" value="Security Group" vertex="1">
+          <mxGeometry height="90" width="290" x="440" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="bastion" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#166534;fontSize=14;" value="Bastion VM&#xa;(NAT=true)" vertex="1">
+          <mxGeometry height="90" width="290" x="90" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="lakehouse" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#166534;fontSize=14;" value="Lakehouse VM&#xa;(NAT=false)" vertex="1">
+          <mxGeometry height="90" width="290" x="440" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="boot1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#166534;fontSize=14;" value="Boot Disk&#xa;10GB HDD" vertex="1">
+          <mxGeometry height="90" width="180" x="790" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="fintech" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#166534;fontSize=14;" value="Fintech VM&#xa;(NAT=false)" vertex="1">
+          <mxGeometry height="90" width="290" x="90" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="ai" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#166534;fontSize=14;" value="AI VM&#xa;(NAT=false)" vertex="1">
+          <mxGeometry height="90" width="290" x="440" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="boot2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#166534;fontSize=14;" value="Boot Disk&#xa;10GB HDD" vertex="1">
+          <mxGeometry height="90" width="180" x="790" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="data1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#166534;fontSize=14;" value="Data Disk&#xa;20GB HDD" vertex="1">
+          <mxGeometry height="90" width="290" x="90" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="data2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#166534;fontSize=14;" value="Data Disk&#xa;20GB HDD" vertex="1">
+          <mxGeometry height="90" width="290" x="440" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="boot3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#166534;fontSize=14;" value="Boot Disk&#xa;10GB HDD" vertex="1">
+          <mxGeometry height="90" width="180" x="790" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="data3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#166534;fontSize=14;" value="Data Disk&#xa;20GB HDD" vertex="1">
+          <mxGeometry height="50" width="180" x="790" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="m_network" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFEDD5;strokeColor=#C2410C;fontSize=14;" value="Existing VPC network&#xa;default" vertex="1">
+          <mxGeometry height="90" width="340" x="1165" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="m_subnet" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFEDD5;strokeColor=#C2410C;fontSize=14;" value="Existing subnet&#xa;ru-central1-a" vertex="1">
+          <mxGeometry height="90" width="340" x="1165" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="m_sa" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFEDD5;strokeColor=#C2410C;fontSize=14;" value="Service Account&#xa;terraform" vertex="1">
+          <mxGeometry height="90" width="340" x="1165" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="m_key" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFEDD5;strokeColor=#C2410C;fontSize=14;" value="Authorized key JSON&#xa;authorized_key.json" vertex="1">
+          <mxGeometry height="90" width="340" x="1165" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="m_mirror" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFEDD5;strokeColor=#C2410C;fontSize=14;" value="Terraform mirror config&#xa;yc.tfrc" vertex="1">
+          <mxGeometry height="70" width="340" x="1165" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="provider" style="endArrow=block;html=1;strokeColor=#1F2937;" target="sg">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="sg" style="endArrow=block;html=1;strokeColor=#1F2937;" target="lakehouse">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="bastion" style="endArrow=block;html=1;strokeColor=#1F2937;" target="boot1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="lakehouse" style="endArrow=block;html=1;strokeColor=#1F2937;" target="boot1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="fintech" style="endArrow=block;html=1;strokeColor=#1F2937;" target="boot2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="ai" style="endArrow=block;html=1;strokeColor=#1F2937;" target="boot2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="fintech" style="endArrow=block;html=1;strokeColor=#1F2937;" target="data1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="ai" style="endArrow=block;html=1;strokeColor=#1F2937;" target="data2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="data1" style="endArrow=block;html=1;strokeColor=#1F2937;" target="data2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="data2" style="endArrow=block;html=1;strokeColor=#1F2937;" target="boot3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d1" edge="1" parent="1" source="sg" style="dashed=1;endArrow=block;html=1;strokeColor=#C2410C;" target="m_network">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d2" edge="1" parent="1" source="boot1" style="dashed=1;endArrow=block;html=1;strokeColor=#C2410C;" target="m_subnet">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d3" edge="1" parent="1" source="bastion" style="dashed=1;endArrow=block;html=1;strokeColor=#C2410C;" target="m_sa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d4" edge="1" parent="1" source="fintech" style="dashed=1;endArrow=block;html=1;strokeColor=#C2410C;" target="m_key">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_tf" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#166534;fontSize=13;" value="Terraform-managed" vertex="1">
+          <mxGeometry height="30" width="290" x="160" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_manual" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFEDD5;strokeColor=#C2410C;fontSize=13;" value="Manual / Existing" vertex="1">
+          <mxGeometry height="30" width="290" x="840" y="860" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
